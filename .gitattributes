@@ -167,3 +167,5 @@
 *.udk filter=lfs diff=lfs merge=lfs -text
 *.upk filter=lfs diff=lfs merge=lfs -text
 *.duf filter=lfs diff=lfs merge=lfs -text
+# Our prettycoolgame binaries!!
+*.dll filter=lfs diff=lfs merge=lfs -text
