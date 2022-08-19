@@ -16,6 +16,7 @@
 *.dylib
 *.dll
 
+
 # Fortran module files
 *.mod
 
@@ -46,7 +47,8 @@ SourceArt/**/*.png
 SourceArt/**/*.tga
 
 # Binary Files
-Binaries/*
+#Binaries/*
+!/Binaries/Win64
 Plugins/*/Binaries/*
 
 # Builds
