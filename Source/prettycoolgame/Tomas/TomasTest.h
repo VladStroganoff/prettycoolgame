@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class PRETTYCOOLGAME_API UTomasTest : public UObject
 {
 	GENERATED_BODY()
