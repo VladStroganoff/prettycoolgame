@@ -1,0 +1,1 @@
+Tiles slices are 1 unit (meter) square - the scaling of the terrain creation actor determines the actual in-game size
