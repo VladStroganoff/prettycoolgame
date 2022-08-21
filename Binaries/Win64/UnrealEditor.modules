@@ -2,6 +2,7 @@
 	"BuildId": "19505902",
 	"Modules": 
 	{
+		"EditorModule": "UnrealEditor-EditorModule.dll",
 		"prettycoolgame": "UnrealEditor-prettycoolgame.dll"
 	}
 }

@@ -8,6 +8,15 @@
 			"Name": "prettycoolgame",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "EditorModule",
+			"Enabled": true,
+			"Type": "Runtime",
+			"LoadingPhase":  "PostEngineInit",
+			"TargetAllowList": [
+				"Editor"
+			]
 		}
 	],
 	"Plugins": [
