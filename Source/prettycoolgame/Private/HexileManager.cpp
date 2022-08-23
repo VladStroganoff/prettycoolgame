@@ -11,6 +11,12 @@ void AHexileManager::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	SpawnHexGrid();
+		
+}
+
+void AHexileManager::SpawnHexGrid()
+{
 	Grid.SetNumZeroed(GridWidth);
 	for(int32 i = 0; i < Grid.Num(); ++i)
 	{
@@ -27,11 +33,23 @@ void AHexileManager::BeginPlay()
 
 			TSubclassOf<AHexTile> tile2Spawn = GrassHexTile;
 			AHexTile* newTile = GetWorld()->SpawnActor<AHexTile>(tile2Spawn, FVector(FIntPoint(xPos, yPos)), FRotator::ZeroRotator);
-			newTile->TileIndex = FIntPoint(x, y);
+
+
+			newTile->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
+			
+			if(newTile->TileData == NULL)
+				newTile->TileData = NewObject<UTileData>();
+
+			newTile->TileData->SetPosition(x,y,0);
+			
 			Grid[x][y] = newTile;
 		}
 	}
-		
 }
 
+
+void AHexileManager::SpawnTileGerid()
+{
+	
+}
 

@@ -36,6 +36,8 @@ protected:
 	
 public:	
 	AHexileManager();
+	void SpawnHexGrid();
+	void SpawnTileGerid();
 
 protected:
 	virtual void BeginPlay() override;
