@@ -2,18 +2,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "TileData.h"
 #include "GameFramework/Actor.h"
 #include "HexTile.generated.h"
 
-
-UENUM()
-enum class HexType : uint8
-{
-	INVALID,
-	Land,
-	Water,
-	Wall
-};
 
 
 UCLASS()
@@ -23,15 +15,11 @@ class PRETTYCOOLGAME_API AHexTile : public AActor
 
 public:
 	UPROPERTY(VisibleInstanceOnly, Category = "Tile")
-	FIntPoint TileIndex;
+	UTileData* TileData;
 	
 
 	
 protected:
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Tile")
-	HexType TileType;
-
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Tile")
 	UStaticMeshComponent* TileMesh;
 
