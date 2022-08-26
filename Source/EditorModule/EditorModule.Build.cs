@@ -9,7 +9,10 @@ public class EditorModule : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicIncludePaths.Add(ModuleDirectory + "/Public");
-		PrivateIncludePaths.Add(ModuleDirectory + "/Private");
+		PrivateIncludePaths.AddRange(new string[] {
+			ModuleDirectory + "/Private",
+			System.IO.Path.GetFullPath(Target.RelativeEnginePath) + "Source/Editor/Blutility/Private"
+		});
 
 		PublicDependencyModuleNames.AddRange(new string[] { "prettycoolgame",
 				"Core",
